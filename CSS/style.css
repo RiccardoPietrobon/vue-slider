@@ -58,6 +58,7 @@ img {
 }
 
 .my-carousel-thumbs {
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     height: 100%;
@@ -87,4 +88,8 @@ img {
 .controls span {
     border: 10px solid white;
     cursor: pointer;
+}
+
+.active {
+    border: 4px solid coral;
 }
