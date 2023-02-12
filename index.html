@@ -50,25 +50,18 @@
 
                 <div class="my-carousel-thumbs" id="thumbs-container">
                     <img :src="image" v-for="(image, index) in images" class="thumb"
-                        :class="(index == activeImage) ? 'active' : '' " alt="thumb-picture">
+                        :class="(index == activeImage) ? 'active' : '' " @click="switchImage(index)"
+                        alt="thumb-picture">
                 </div>
             </div>
 
             <div class="my-carousel-controls">
 
-                <button class="btn btn-outline-dark" id="prev">
+                <button class="btn btn-outline-dark" id="prev" @click="prevImage()">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <button class="btn btn-outline-dark" id="inverti-autoplay">
-                    <i class="fa-solid fa-repeat"></i>
-                </button>
-
-                <button class="btn btn-outline-dark" id="stop-autoplay">
-                    <i class="fa-solid fa-stop"></i>
-                </button>
-
-                <button class="btn btn-outline-dark" id="next">
+                <button class="btn btn-outline-dark" id="next" @click="nextImage()">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
