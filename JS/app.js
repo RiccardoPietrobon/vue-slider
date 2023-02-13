@@ -10,7 +10,10 @@ const app = Vue.createApp({
                 "./img/05.webp", //indice 5
             ],
 
-            activeImage: 0
+            activeImage: 0,
+
+
+
         }
     },
 
@@ -33,9 +36,15 @@ const app = Vue.createApp({
 
         switchImage(index) {
             this.activeImage = index;
-        }
+        },
 
     },
+
+    created() {
+        setInterval(() => {
+            this.nextImage();
+        }, 3000);
+    }
 
 });
 

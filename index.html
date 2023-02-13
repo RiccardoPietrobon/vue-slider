@@ -44,7 +44,7 @@
             <div class="my-carousel">
 
                 <div class="my-carousel-main" id="slides-container">
-                    <img :src="images[activeImage]" alt="main-picture">
+                    <img :src="images[activeImage]" alt="main-picture" @mouseover="">
 
                 </div>
 
@@ -57,11 +57,11 @@
 
             <div class="my-carousel-controls">
 
-                <button class="btn btn-outline-dark" id="prev" @click="prevImage()">
+                <button class="btn btn-outline-dark m-2" id="prev" @click="prevImage()">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <button class="btn btn-outline-dark" id="next" @click="nextImage()">
+                <button class="btn btn-outline-dark m-2" id="next" @click="nextImage()">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
