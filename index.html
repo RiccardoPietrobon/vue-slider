@@ -44,7 +44,8 @@
             <div class="my-carousel">
 
                 <div class="my-carousel-main" id="slides-container">
-                    <img :src="images[activeImage]" alt="main-picture" @mouseover="">
+                    <img :src="images[activeImage]" alt="main-picture" @mouseover="mouseOver = true"
+                        @mouseleave="mouseOver = false">
 
                 </div>
 
@@ -60,6 +61,15 @@
                 <button class="btn btn-outline-dark m-2" id="prev" @click="prevImage()">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
+
+                <button class="btn btn-outline-dark m-2" id="play" @click="startCarosel()">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button class="btn btn-outline-dark m-2" id="stop" @click="stopCarosel()">
+                    <i class="fa-solid fa-stop"></i>
+                </button>
+
 
                 <button class="btn btn-outline-dark m-2" id="next" @click="nextImage()">
                     <i class="fa-solid fa-chevron-right"></i>

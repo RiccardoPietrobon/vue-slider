@@ -12,7 +12,8 @@ const app = Vue.createApp({
 
             activeImage: 0,
 
-
+            interval: false,
+            mouseOver: false,
 
         }
     },
@@ -38,12 +39,24 @@ const app = Vue.createApp({
             this.activeImage = index;
         },
 
+        stopCarosel() {
+            clearInterval(this.interval);
+        },
+
+        startCarosel() {
+            this.interval = setInterval(() => {
+                if (!this.mouseOver) {
+                    this.nextImage();
+
+                }
+            }, 3000);
+        },
+
     },
 
     created() {
-        setInterval(() => {
-            this.nextImage();
-        }, 3000);
+        this.startCarosel();
+
     }
 
 });
